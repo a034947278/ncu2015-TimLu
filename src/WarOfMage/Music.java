@@ -27,12 +27,9 @@ public class Music {
 		startmenu = (int) (Math.random() * 12);
 		startmenubgm = new Hashtable<Integer, AudioClip>();
 		ses = new Hashtable<Integer, AudioClip>();
-
-		addBgm(startmenu, "./BGM/Startmenu/" + startmenu + ".wav", startmenubgm);
 		/*
-		 * for (int i = 0; i < 12; i++) { addBgm(i, "./BGM/Startmenu/" + i +
-		 * ".wav", startmenubgm); }
-		 */
+		addBgm(startmenu, "./BGM/Startmenu/" + startmenu + ".wav", startmenubgm);
+		
 		addSe(0, "./SE/select.wav");
 		addSe(1, "./SE/click.wav");
 		addSe(2, "./SE/fireice.wav");
@@ -41,16 +38,21 @@ public class Music {
 		addSe(5, "./SE/hit1.wav");
 		addSe(6, "./SE/hit2.wav");
 		addSe(7, "./SE/hit3.wav");
-
+*/
+		
+		/*
+		 * for (int i = 0; i < 12; i++) { addBgm(i, "./BGM/Startmenu/" + i +
+		 * ".wav", startmenubgm); }
+		 */
 	}
 
 	public void playStartmenuBGM() {
-		this.playBgm(startmenu, startmenubgm);
+		//this.playBgm(startmenu, startmenubgm);
 	}
 
 	public void playHitSe() {
-		int i = (int) (Math.random() * 3 + 5);
-		this.playSe(i);
+		//int i = (int) (Math.random() * 3 + 5);
+		//this.playSe(i);
 	}
 
 	boolean loadData(int no, String file, Hashtable<Integer, AudioClip> pool) {
@@ -121,6 +123,7 @@ public class Music {
 	}
 
 	public boolean playSe(int no) {
+		/*
 		AudioClip ac = getAc(no, ses);
 		if (ac != null)
 			ac.stop();
@@ -128,6 +131,7 @@ public class Music {
 		if (ac == null)
 			return false;
 		ac.play();
+		*/
 		return true;
 	}
 }
